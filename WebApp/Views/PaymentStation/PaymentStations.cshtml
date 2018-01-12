@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Pay Stations";
+    @model WebApp.Models.PayStationViewModel
+    int i = 0;
+}
+@*<h2>@ViewData["Title"]</h2>*@
+<h3>@ViewData["Message"]</h3>
+
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>City/State</th>
+                <th>Accepts Cash?</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.PayStations != null || Model.PayStations.Count > 0)
+            {
+                @foreach (var item in Model.PayStations)
+                {
+
+                    <tr>
+                        <td>@item.PayStationName</td>
+                        <td>@item.Address</td>
+                        <td>@item.City @item.State</td>
+                        <td>@item.AcceptsCash</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <p>No records to display</p>
+
+            }
+
+
+
+
+
+</tbody>
+
+    </table>
+</div>
+
+

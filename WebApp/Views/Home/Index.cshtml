@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home";
+
+}
+<h2>@ViewData["Title"]</h2>
+@*<h3>@ViewData["Message"]</h3>*@
+
+
+<p>
+    <a class="btn btn-default" href="/PaymentStation/PaymentStations">
+        Get
+    </a> Walk-in Payment Stations (Anonymous)
+    <br /><br />
+    <a class="btn btn-default" href="/PaymentStation/PaymentStationById?id=0000069">
+        Get
+    </a> Walk-in Payment Stations By Id (Protected by Authorize attribute Standard ASP.Net Cookie)
+    <br /><br />
+    <a class="btn btn-default" href="/PaymentStation/GetPaymentStationById/0000070">
+        Get
+    </a> Walk-in Payment Stations By Id (Protected by Authorize attribute cookie with Token for Web-Api Auth)
+    <br /> <i>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  token added to Request header</i>
+    <br /><br />
+
+</p>
+
+
+
+

@@ -1,0 +1,12 @@
+E:\2017-Dev\Core2Web\WebApp\bin\Debug\netcoreapp2.0\WebApp.deps.json
+E:\2017-Dev\Core2Web\WebApp\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.json
+E:\2017-Dev\Core2Web\WebApp\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.dev.json
+E:\2017-Dev\Core2Web\WebApp\bin\Debug\netcoreapp2.0\WebApp.dll
+E:\2017-Dev\Core2Web\WebApp\bin\Debug\netcoreapp2.0\WebApp.pdb
+E:\2017-Dev\Core2Web\WebApp\obj\Debug\netcoreapp2.0\WebApp.csproj.CoreCompileInputs.cache
+E:\2017-Dev\Core2Web\WebApp\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfoInputs.cache
+E:\2017-Dev\Core2Web\WebApp\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
+E:\2017-Dev\Core2Web\WebApp\obj\Debug\netcoreapp2.0\WebApp.dll
+E:\2017-Dev\Core2Web\WebApp\obj\Debug\netcoreapp2.0\WebApp.pdb
+E:\2017-Dev\Core2Web\WebApp\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\2017-Dev\Core2Web\WebApp\obj\Debug\netcoreapp2.0\WebApp.csprojResolveAssemblyReference.cache
