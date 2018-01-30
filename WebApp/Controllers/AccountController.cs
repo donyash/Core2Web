@@ -100,7 +100,7 @@ namespace WebApp.Controllers
             var token = new JwtSecurityToken(_config["Tokens:Issuer"],
               _config["Tokens:Issuer"],
               claims,
-              expires: DateTime.Now.AddMinutes(30),
+              expires: DateTime.Now.AddMinutes(1),   //set to 30
               signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

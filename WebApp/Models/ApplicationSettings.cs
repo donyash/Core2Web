@@ -9,9 +9,11 @@ namespace WebApp.Models
         {
             public MockServiceStaticResponses MockServiceStaticResponses { get; set; }
             public WebApi WebApi { get; set; }
-        }
+            public AzureWebApi AzureWebApi { get; set; }
 
-        public class MockServiceStaticResponses
+    }
+
+    public class MockServiceStaticResponses
         {
             public BaseUri BaseUri { get; set; }
         }
@@ -23,6 +25,11 @@ namespace WebApp.Models
         }
 
         public class WebApi
+        {
+            public BaseUri BaseUri { get; set; }
+        }
+
+        public class AzureWebApi
         {
             public BaseUri BaseUri { get; set; }
         }

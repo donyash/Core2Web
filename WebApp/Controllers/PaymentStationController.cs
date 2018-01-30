@@ -39,7 +39,11 @@ namespace WebApp.Controllers
             //var endpoint = "/api/PayStation/GetAllPayStations";
 
             //use this for the WebApi solution
-            var baseUri = _applicationSettings.WebApi.BaseUri.PayStations;
+            //var baseUri = _applicationSettings.WebApi.BaseUri.PayStations;
+            //var endpoint = "/v1/PayStation/GetAllPaymentStations";
+
+            //use this for the Azure hosted WebApi solution
+            var baseUri = _applicationSettings.AzureWebApi.BaseUri.PayStations;
             var endpoint = "/v1/PayStation/GetAllPaymentStations";
 
             using (var client = new HttpClient())
@@ -90,7 +94,7 @@ namespace WebApp.Controllers
             ViewData["Message"] = "Pay Stations By Id";
             var viewModel = new PayStationViewModel();
 
-            var baseUri = "http://localhost:50779";
+            var baseUri = _applicationSettings.WebApi.BaseUri.PayStations;
             var endpoint = "/v1/PayStation/GetPaymentStationById" + "?id=" + id;
 
             using (var client = new HttpClient())

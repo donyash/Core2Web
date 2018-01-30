@@ -28,8 +28,9 @@ namespace WebApp
             // Set up configuration sources.
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
 
@@ -71,7 +72,7 @@ namespace WebApp
                 .AddCookie(options => {
                     options.AccessDeniedPath = new PathString("/Account/Login/");
                     options.LoginPath = new PathString("/Account/Login/");
-                    options.ExpireTimeSpan = TimeSpan.FromMinutes(3);
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
                 })
              .AddJwtBearer(cfg =>
              {
@@ -83,7 +84,7 @@ namespace WebApp
                      ValidIssuer = Configuration["Tokens:Issuer"],
                      ValidAudience = Configuration["Tokens:Issuer"],
                      IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(Configuration["Tokens:Key"])),
-                     //ClockSkew = TimeSpan.FromMinutes(5) //up to 5 minute tolerance for the expiration date
+                     ClockSkew = TimeSpan.FromMinutes(1) //up to 5 minute tolerance for the expiration date
                  };
 
              });
