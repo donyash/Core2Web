@@ -135,8 +135,6 @@ namespace WebApp.Controllers
             return stations;
         }
 
-
-
         private void SetUpUri(HttpClient client, string baseUri, string endpoint)
         {
             client.BaseAddress = new Uri(baseUri + endpoint);

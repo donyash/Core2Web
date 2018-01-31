@@ -7,9 +7,15 @@
     <ApplicationInsightsAnnotationResourceId>/subscriptions/daa96c75-1e97-4982-9bce-ddc2e94ba982/resourcegroups/dpy-ResourceGroup/providers/microsoft.insights/components/dpy-WebApp</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\dpy-WebApp-staging - FTP.pubxml" />
+    <None Remove="Properties\PublishProfiles\WebApp20180118030429 - Web Deploy.pubxml" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.Web" Version="2.4.1" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.3" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.0.1" />
