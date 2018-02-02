@@ -114,6 +114,26 @@ namespace WebApp.Controllers
         }
 
 
+        #region test
+        public async Task<IActionResult> Test()
+        {
+            ViewData["Message"] = "Test Pay Stations";
+            var viewModel = new PayStationViewModel();
+
+            var baseUri = _applicationSettings.AzureWebApi.BaseUri.PayStations;
+            var endpoint = "/v1/PayStation/Test";
+
+            using (var client = new HttpClient())
+            {
+                List<PaymentStationRecord> payStationList = await RunAsyncPayStations(client, baseUri, endpoint);
+                viewModel.PayStations = payStationList;
+            }
+
+            return View(viewModel);
+        }
+        #endregion
+
+
         #region privates
 
         private async Task<List<PaymentStationRecord>> RunAsyncPayStations(HttpClient client, string baseUri, string endpoint)
