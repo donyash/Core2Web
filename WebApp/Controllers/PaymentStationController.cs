@@ -129,7 +129,7 @@ namespace WebApp.Controllers
                 viewModel.PayStations = payStationList;
             }
 
-            return View(viewModel);
+            return View("PaymentStations", viewModel);
         }
         #endregion
 
