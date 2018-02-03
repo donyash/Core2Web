@@ -29,6 +29,8 @@ namespace WebApp.Controllers
         {
             ViewData["Message"] = "Your application description page.";
             ViewData["EnvironmentMessage"] = GetEnvironmentMessage();
+            ViewData["ApiMessage"] = GetApiMessage();
+
 
             return View();
         }
@@ -52,6 +54,11 @@ namespace WebApp.Controllers
         {
             var message = _applicationSettings.Messages.Environment;
             return message;
+        }
+        private string GetApiMessage()
+        {
+            var message = _applicationSettings.AzureWebApi.BaseUri.PayStations;
+            return message.ToString();
         }
 
     }
