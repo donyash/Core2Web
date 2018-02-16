@@ -117,11 +117,11 @@ namespace WebApp.Controllers
         #region test
         public async Task<IActionResult> Testing()
         {
-            ViewData["Message"] = "Test Pay Stations";
+            ViewData["Message"] = "Pay Stations via docker container";
             var viewModel = new PayStationViewModel();
 
-            var baseUri = _applicationSettings.AzureWebApi.BaseUri.PayStations;
-            var endpoint = "/v1/PayStation/Testing";
+            var baseUri = _applicationSettings.AzureWebApiContainer.BaseUri.PayStations;
+            var endpoint = "/v1/PayStation/GetAllPaymentStations";
 
             using (var client = new HttpClient())
             {

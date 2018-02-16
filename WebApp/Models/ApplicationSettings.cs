@@ -11,10 +11,11 @@ namespace WebApp.Models
             public WebApi WebApi { get; set; }
             public AzureWebApi AzureWebApi { get; set; }
             public Messages Messages { get; set; }
+            public AzureWebApiContainer AzureWebApiContainer { get; set; }
 
     }
 
-        public class MockServiceStaticResponses
+    public class MockServiceStaticResponses
             {
                 public BaseUri BaseUri { get; set; }
             }
@@ -40,5 +41,9 @@ namespace WebApp.Models
             public string Environment { get; set; }
 
         }
+    public class AzureWebApiContainer
+    {
+        public BaseUri BaseUri { get; set; }
+    }
 
 }
